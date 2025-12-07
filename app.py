@@ -1,5 +1,10 @@
 import numpy as np
-import tensorflow as tf
+
+from tflite_runtime.interpreter import Interpreter
+
+interpreter = Interpreter(model_path="tb_model.tflite")
+interpreter.allocate_tensors()
+
 from flask import Flask, render_template, request
 from tensorflow.keras.preprocessing import image
 import os
