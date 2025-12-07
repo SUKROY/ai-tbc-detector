@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+
+        <img src="{{ image_path }}" class="preview">
+
+        {% if result == "TUBERCULOSIS" %}
+            <h2 class="positive">⚠️ Result: TUBERCULOSIS (Positive)</h2>
+        {% else %}
+            <h2 class="negative">✔️ Result: NORMAL</h2>
+        {% endif %}
+
+        <br>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>

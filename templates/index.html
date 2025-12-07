@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TB Detection System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TB Chest X-Ray Detection</h1>
+        <p>Upload a chest X-ray image to detect Tuberculosis.</p>
+
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
